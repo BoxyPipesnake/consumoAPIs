@@ -36,6 +36,8 @@ axiosBtn.addEventListener('click', () => {
       const data = response.data;
       // Completar: renderizar datos en el contenedor
       // Pista: Observa que Axios ya convierte la respuesta JSON, por lo que no necesitas usar `.json()`.
+      const personajes = data.results;
+      renderCharacters(personajes);
     })
     .catch(error => {
       console.error('Error:', error);
