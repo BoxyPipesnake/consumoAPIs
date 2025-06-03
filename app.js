@@ -1,6 +1,3 @@
-const axios = require('axios');
-const fetch = require('node-fetch');
-
 // Implementa las Solicitudes con Fetch
 const fetchBtn = document.getElementById('fetch-btn');
 const dataContainer = document.getElementById('data-container');
@@ -16,6 +13,8 @@ fetchBtn.addEventListener('click', () => {
     .then(data => {
       // Completar: renderizar datos en el contenedor
       // Pista: Usa `data.results` para iterar sobre los personajes obtenidos.
+      const personajes = data.results;
+      renderCharacters(personajes);
     })
     .catch(error => {
       console.error('Error:', error);
